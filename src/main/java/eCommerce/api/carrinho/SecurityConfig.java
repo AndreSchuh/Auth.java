@@ -26,13 +26,13 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/", "/index", "/login", "/register", "/css/**", "/js/**", "/imagens/**", "/v1/users/**", "/auth/**").permitAll()
+                        .requestMatchers("/", "/login", "/register", "/css/**", "/js/**", "/v1/users/**", "/auth/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
                         .loginPage("/login")
                         .loginProcessingUrl("/login")  // URL que processa o login
-                        .defaultSuccessUrl("/index.html", true)       // URL de redirecionamento após sucesso
+                        .defaultSuccessUrl("/login.html", true)       // URL de redirecionamento após sucesso
                         .permitAll()
                 )
                 .exceptionHandling(exceptions -> exceptions

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>eCommerce.api</groupId>
-	<artifactId>carrinho</artifactId>
+	<artifactId>authentication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>carrinho</name>
 	<description>Demo project for Spring Boot</description>
