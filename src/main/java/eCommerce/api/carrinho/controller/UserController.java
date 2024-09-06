@@ -19,27 +19,27 @@ public class UserController {
         this.userService = userService;
     }
 
-//    @PostMapping("/register")
-//    public String registerUser(@RequestBody UserDto userDto) {
-//        userService.registerUser(userDto);
-//        return "User registered successfully!";
-//    }
-//
-//    @PostMapping("/login")
-//    public String loginUser(@RequestBody UserDto userDto) {
-//        userService.loginUser(userDto);
-//        return "User registered successfully!";
-//    }
-//
-//    @GetMapping
-//    public List<User> listAllUsers() {
-//        return userService.listAllUsers();
-//    }
-//
-//    @DeleteMapping("/{id}")
-//    public String deleteUserById(@PathVariable UUID id) {
-//        userService.deleteUserById(id);
-//        return "User with ID " + id + " deleted successfully!";
-//    }
+    @PostMapping("/register")
+    public String registerUser(@RequestBody UserDto userDto) {
+        userService.registerUser(userDto);
+        return "User registered successfully!";
+    }
+
+    @PostMapping("/login")
+    public String loginUser(@RequestBody UserDto userDto) {
+        userService.loginUser(userDto);
+        return "User logged in successfully!";
+    }
+
+    @GetMapping
+    public List<User> listAllUsers() {
+        return userService.listAllUsers();
+    }
+
+    @DeleteMapping("/{id}")
+    public String deleteUserById(@PathVariable UUID id) {
+        userService.deleteUserById(id);
+        return "User with ID " + id + " deleted successfully!";
+    }
 
 }

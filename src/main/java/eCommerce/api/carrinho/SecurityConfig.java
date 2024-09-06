@@ -1,6 +1,5 @@
 package eCommerce.api.carrinho;
 
-import eCommerce.api.carrinho.service.CustomUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,28 +14,13 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfig {
 
-    private final CustomUserDetailsService userDetailsService;
-
-    public SecurityConfig(CustomUserDetailsService userDetailsService) {
-        this.userDetailsService = userDetailsService;
-    }
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/", "/login", "/register", "/css/**", "/js/**", "/v1/users/**", "/auth/**").permitAll()
+                        .requestMatchers("/", "/login", "/register", "/v1/users/**").permitAll()
                         .anyRequest().authenticated()
-                )
-                .formLogin(form -> form
-                        .loginPage("/login")
-                        .loginProcessingUrl("/login")  // URL que processa o login
-                        .defaultSuccessUrl("/login.html", true)       // URL de redirecionamento após sucesso
-                        .permitAll()
-                )
-                .exceptionHandling(exceptions -> exceptions
-                        .accessDeniedPage("/access-denied.html") // Página para acesso negado
                 );
         return http.build();
     }
