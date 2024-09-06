@@ -43,4 +43,16 @@ public class UserService {
         Authentication authentication = new UsernamePasswordAuthenticationToken(user.getEmail(), user.getPassword());
         SecurityContextHolder.getContext().setAuthentication(authentication);
     }
+
+    public List<User> listAllUsers() {
+        return userRepository.findAll();
+    }
+
+    public void deleteUserById(UUID id) {
+        if (userRepository.existsById(id)) {
+            userRepository.deleteById(id);
+        } else {
+            throw new IllegalArgumentException("User with ID " + id + " does not exist.");
+        }
+    }
 }
