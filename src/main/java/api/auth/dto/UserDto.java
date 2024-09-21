@@ -1,4 +1,4 @@
-package eCommerce.api.carrinho.dto;
+package api.auth.dto;
 
 public class UserDto {
     private String email;

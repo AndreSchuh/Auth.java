@@ -1,6 +1,6 @@
-package eCommerce.api.carrinho.repository;
+package api.auth.repository;
 
-import eCommerce.api.carrinho.entity.User;
+import api.auth.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

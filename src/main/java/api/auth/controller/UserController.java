@@ -1,8 +1,8 @@
-package eCommerce.api.carrinho.controller;
+package api.auth.controller;
 
-import eCommerce.api.carrinho.dto.UserDto;
-import eCommerce.api.carrinho.entity.User;
-import eCommerce.api.carrinho.service.UserService;
+import api.auth.dto.UserDto;
+import api.auth.entity.User;
+import api.auth.service.UserService;
 
 import org.springframework.web.bind.annotation.*;
 

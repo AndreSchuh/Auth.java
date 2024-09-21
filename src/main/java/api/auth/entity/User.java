@@ -1,4 +1,4 @@
-package eCommerce.api.carrinho.entity;
+package api.auth.entity;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;

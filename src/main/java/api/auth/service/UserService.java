@@ -1,8 +1,8 @@
-package eCommerce.api.carrinho.service;
+package api.auth.service;
 
-import eCommerce.api.carrinho.dto.UserDto;
-import eCommerce.api.carrinho.entity.User;
-import eCommerce.api.carrinho.repository.UserRepository;
+import api.auth.dto.UserDto;
+import api.auth.entity.User;
+import api.auth.repository.UserRepository;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

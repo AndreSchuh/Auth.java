@@ -1,10 +1,10 @@
-package eCommerce.api.carrinho;
+package api.auth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CarrinhoApplicationTests {
+class AuthApplicationTests {
 
 	@Test
 	void contextLoads() {

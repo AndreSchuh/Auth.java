@@ -1,11 +1,11 @@
-package eCommerce.api.carrinho;
+package api.auth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CarrinhoApplication {
+public class AuthApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(CarrinhoApplication.class, args);
+		SpringApplication.run(AuthApplication.class, args);
 	}
 }
